@@ -1,16 +1,26 @@
 {
-  "menu": [
-    {
-      "id": "home",
-      "name": "Beranda"
-    }
-  ],
-  "cta": {
-    "login": {
-      "children": "Login"
-    },
-    "register": {
-      "children": "Register"
+  "navigation": {
+    "menu": [
+      {
+        "id": "home",
+        "name": "Beranda"
+      },
+      {
+        "id": "foods",
+        "name": "Makanan"
+      },
+      {
+        "id": "faq",
+        "name": "FAQ"
+      }
+    ],
+    "cta": {
+      "login": {
+        "children": "Login"
+      },
+      "register": {
+        "children": "Register"
+      }
     }
   }
 }

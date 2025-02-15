@@ -26,9 +26,7 @@ export default defineNuxtConfig({
     port: process.env.NUXT_PORT ? Number(process.env.NUXT_PORT) : 3000,
   },
   css: ["~/assets/css/main.css"],
-  modules: [
-    '@nuxt/image',
-  ],
+  modules: ["@nuxt/image"],
   vite: {
     plugins: [tailwindcss()],
   },

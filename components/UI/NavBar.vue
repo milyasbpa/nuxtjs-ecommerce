@@ -4,7 +4,8 @@
       clsx(
         'grid grid-cols-1 place-content-center place-items-center',
         'w-full h-[94px]',
-        'fixed top-0 left-0 right-0'
+        'fixed top-0 left-0 right-0',
+        'z-[100]'
       )
     "
   >
@@ -19,14 +20,17 @@
       <NuxtImg src="/logo/kaldoo.svg" :class="clsx('w-[150px] h-[44px]')" />
 
       <div
-        v-for="(item, index) in dictionaries.menu"
         :class="
           clsx(
-            'grid grid-flow-col items-center content-center justify-center justify-items-center gap-[1rem]'
+            'grid grid-flow-col items-center content-center justify-center justify-items-center gap-[42px]'
           )
         "
       >
-        <UINavMenuLink :key="index" :id="item.id">
+        <UINavMenuLink
+          v-for="(item, index) in dictionaries.navigation.menu"
+          :key="index"
+          :id="item.id"
+        >
           {{ item.name }}
         </UINavMenuLink>
       </div>
@@ -38,9 +42,11 @@
           )
         "
       >
-        <NavLoginLink>{{ dictionaries.cta.login.children }}</NavLoginLink>
+        <NavLoginLink>{{
+          dictionaries.navigation.cta.login.children
+        }}</NavLoginLink>
         <NavRegisterLink>{{
-          dictionaries.cta.register.children
+          dictionaries.navigation.cta.register.children
         }}</NavRegisterLink>
       </div>
     </div>

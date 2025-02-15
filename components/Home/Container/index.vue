@@ -3,14 +3,28 @@
     :class="
       clsx(
         'grid grid-cols-1 place-content-start place-items-start',
-        'w-full h-[1100px]'
+        'w-full',
+        'relative'
       )
     "
-    :style="`background: radial-gradient(169.5% 169.5% at -17.51% 133.92%, #149548 0%, #FEFE98 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-      radial-gradient(68.93% 94.7% at 65.88% -58.81%, #149548 0%, rgba(20, 149, 72, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-      linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
-      `"
-  ></div>
+  >
+    <NuxtImg src="/images/home/hero-bg.svg" :class="clsx('w-full')" />
+
+    <div
+      :class="
+        clsx(
+          'absolute top-0 left-0 right-0 bottom-0',
+          'z-[10]',
+          'grid grid-cols-1 place-content-center place-items-center',
+          'w-full h-full'
+        )
+      "
+    >
+      <div :class="clsx('w-full max-w-[820px]')">
+        <HomeFragmentsHero />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
