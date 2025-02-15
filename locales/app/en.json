@@ -1,0 +1,16 @@
+{
+  "menu": [
+    {
+      "id": "home",
+      "name": "Beranda"
+    }
+  ],
+  "cta": {
+    "login": {
+      "children": "Login"
+    },
+    "register": {
+      "children": "Register"
+    }
+  }
+}

@@ -1,5 +1,13 @@
 <template>
-  <div>
-    <h1 class="text-[blue] font-bold">welcome index</h1>
-  </div>
+  <HomeContainer />
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: "Home",
+  meta: [{ name: "description", content: "Kaldoo Homepage" }],
+});
+definePageMeta({
+  layout: "default",
+});
+</script>
