@@ -43,9 +43,8 @@ const dictionaries = getDictionaries();
 
 const homeStore = useHomeStore();
 
-console.log(homeStore.products, "ini apa");
-
 await useAsyncData("products", async () => {
   await homeStore.fetchTop3Product();
+  return homeStore.products;
 });
 </script>

@@ -29,7 +29,6 @@ export const useHomeStore = defineStore("home", {
             };
           });
         this.loading = false;
-        console.log(this.products, "ini apa products");
       } catch (error) {
         this.loading = false;
         console.error("Failed to fetch products data:", error);
