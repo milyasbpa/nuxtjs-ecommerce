@@ -24,6 +24,21 @@
         <HomeFragmentsHero />
       </div>
     </div>
+
+    <div
+      :class="
+        clsx(
+          'absolute top-[560px] left-0 right-0 bottom-0',
+          'z-[10]',
+          'grid grid-cols-1 place-content-center place-items-center',
+          'w-full h-full'
+        )
+      "
+    >
+      <div :class="clsx('w-full max-w-[820px]')">
+        <HomeFragmentsProducts />
+      </div>
+    </div>
   </div>
 </template>
 

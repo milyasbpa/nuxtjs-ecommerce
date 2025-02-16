@@ -16,10 +16,10 @@
       "
     >
       <h1 :class="'text-[60px] font-medium text-[white]'">
-        {{ dictionaries.message }}
+        {{ dictionaries.hero.message }}
       </h1>
       <p :class="'text-[1.5rem] font-medium text-[#F8F9FB]'">
-        {{ dictionaries.description }}
+        {{ dictionaries.hero.description }}
       </p>
     </div>
     <NuxtLink
@@ -33,7 +33,7 @@
         )
       "
     >
-      {{ dictionaries.cta.primary.children }}
+      {{ dictionaries.hero.cta.primary.children }}
     </NuxtLink>
   </div>
 </template>

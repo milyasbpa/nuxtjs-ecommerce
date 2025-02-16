@@ -1,19 +1,38 @@
 import { defineStore } from "pinia";
+import type { GetProductListSuccessResponseInterface } from "~/api/rest/models/product";
+import { fetchGetProductList } from "~/api/rest/services/product";
 
-export const useDashboardStore = defineStore("dashboard", {
+export const useHomeStore = defineStore("home", {
   state: () => ({
-    users: [],
-    revenue: 0,
+    products: [] as {
+      id: number;
+      name: string;
+      image_url: string;
+      price: number;
+    }[],
+    loading: true as boolean,
   }),
   actions: {
-    async fetchDashboardData() {
+    async fetchTop3Product() {
       try {
-        const response = await fetch("https://api.example.com/dashboard");
-        const data = await response.json();
-        this.users = data.users;
-        this.revenue = data.revenue;
+        const data =
+          (await fetchGetProductList()) as GetProductListSuccessResponseInterface[];
+
+        this.products = data
+          .filter((_, index) => index < 3)
+          .map((item) => {
+            return {
+              id: item.id,
+              name: item.title,
+              image_url: item.image,
+              price: item.price,
+            };
+          });
+        this.loading = false;
+        console.log(this.products, "ini apa products");
       } catch (error) {
-        console.error("Failed to fetch dashboard data:", error);
+        this.loading = false;
+        console.error("Failed to fetch products data:", error);
       }
     },
   },

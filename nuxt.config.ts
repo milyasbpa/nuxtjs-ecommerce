@@ -26,7 +26,12 @@ export default defineNuxtConfig({
     port: process.env.NUXT_PORT ? Number(process.env.NUXT_PORT) : 3000,
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", "@pinia/nuxt"],
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.NUXT_API_BASE_URL || "http://localhost:3500",
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },

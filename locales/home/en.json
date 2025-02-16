@@ -1,9 +1,14 @@
 {
-  "message": "Siap Jualan Makanan Viral Dari Mana Aja, Kapan Aja!",
-  "description": "Mau mulai jualan sekarang?",
-  "cta": {
-    "primary": {
-      "children": "Gabung grup jualan Kaldoo"
+  "hero": {
+    "message": "Siap Jualan Makanan Viral Dari Mana Aja, Kapan Aja!",
+    "description": "Mau mulai jualan sekarang?",
+    "cta": {
+      "primary": {
+        "children": "Gabung grup jualan Kaldoo"
+      }
     }
+  },
+  "product": {
+    "message": "Produk makanan paling viral buat kamu!"
   }
 }
